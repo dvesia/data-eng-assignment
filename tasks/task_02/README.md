@@ -24,34 +24,24 @@ The ETL process extracts data from a JSON file, transforms it using a metadata f
 and saves the transformed data to a CSV file.  
 
 ## Project Structure  
-<code>
-<ul>
-  <li>data
-    <ul>
-      <li>raw
-        <ul>
-          <li>orders.jsonl</li>
-        </ul>
-      </li>
-      <li>prepared
-        <ul>
-          <li>orders.csv</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>metadata.yaml</li>
-  <li>README.md</li>
-  <li>execute_etl_pipeline.py</li>
-  <li>extract.py</li>
-  <li>load.py</li>
-  <li>transform.py</li>
-  <li>tests</li>
-    <ul>
-        <li>test-run-etl-pipeline.py</li>
-    </ul>
-</ul>
-</code>
+
+```
+- data  
+    - raw
+        - orders.jsonl
+    - prepared
+        - orders.csv
+- src
+   - extract.py
+   - transform.py
+   - load.py
+   - run-etl-pipeline.py
+- tests
+   - test-run-etl-pipeline.py
+- metadata.yaml
+- requirements.txt
+- README.md
+```
 
 The data directory contains the raw and prepared data files.  
 The metadata.yaml file contains metadata information about the dataset,   
