@@ -102,7 +102,8 @@ def transform_data(
     df = df.withColumn("province_region", get_province_and_region_udf("PostalCode"))
 
     # Split the province_region column into separate columns for province and region
-    df = df.withColumn("Province", fs.when(fs.col("PostalCode") == "", "").otherwise(df["province_region"]["province"]))\
+    df = df.withColumn("Province", fs.when(fs.col("PostalCode") == "", "")
+                       .otherwise(df["province_region"]["province"]))\
         .withColumn("Region", fs.when(fs.col("PostalCode") == "", "").otherwise(df["province_region"]["region"])) \
         .drop("province_region", "StateOrRegion")
 
