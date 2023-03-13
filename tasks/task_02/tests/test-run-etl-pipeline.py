@@ -1,5 +1,3 @@
-import os
-
 import pytest
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as fs
