@@ -14,7 +14,6 @@ from extract import extract_data
 from transform import transform_data
 from load import save_dataframe_to_csv
 
-
 # Define paths
 JSON_FILEPATH = "../data/raw/orders.jsonl"
 METADATA_FILEPATH = '../metadata.yaml'

@@ -103,7 +103,7 @@ def transform_data(
 
     # Split the province_region column into separate columns for province and region
     df = df.withColumn("Province", fs.when(fs.col("PostalCode") == "", "")
-                       .otherwise(df["province_region"]["province"]))\
+                       .otherwise(df["province_region"]["province"])) \
         .withColumn("Region", fs.when(fs.col("PostalCode") == "", "").otherwise(df["province_region"]["region"])) \
         .drop("province_region", "StateOrRegion")
 
@@ -127,8 +127,8 @@ def transform_data(
 
     # Fill Amount column with 0.0 values when OrderStatus is Canceled
     df = df.withColumn(
-            "Amount", fs.when(fs.col('OrderStatus') == 'Canceled', 0.0).otherwise(fs.col("Amount"))
-        )
+        "Amount", fs.when(fs.col('OrderStatus') == 'Canceled', 0.0).otherwise(fs.col("Amount"))
+    )
 
     # Reorder columns
     ordered_columns = metadata['ordered_columns']

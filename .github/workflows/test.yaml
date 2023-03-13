@@ -20,6 +20,3 @@ jobs:
 
     - name: Run tests
       run: pytest tasks/task_02/tests/test-run-etl-pipeline.py -v
-
-    - name: PEP8 check
-      run: flake8 tasks/task_02

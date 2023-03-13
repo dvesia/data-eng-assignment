@@ -1,7 +1,6 @@
 from utils import generate_orders_data, run_sql_and_save_results
 
 if __name__ == "__main__":
-
     # Generate a csv with 500 records
     generate_orders_data(500)
 

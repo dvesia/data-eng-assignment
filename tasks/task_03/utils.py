@@ -16,7 +16,7 @@ def generate_orders_data(num_records):
 
     # Generate random data for the orders table
     orders_data = []
-    for i in range(1, num_records+1):
+    for i in range(1, num_records + 1):
         id = random.randint(1, 10)
         brand_id = random.randint(1, 5)
         transaction_value = round(random.uniform(10.0, 1000.0), 2)
